@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HLS Video Player with Watermark</title>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet">
+    <style>
+        .video-container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+        }
+        .watermark {
+            position: absolute;
+            bottom: 10px; /* Adjust this value as needed */
+            right: 1px;  /* Adjust this value as needed */
+            opacity: 5;
+            pointer-events: none;
+            width: 80px; /* Adjust the size of the watermark as needed */
+        }
+        .video-js {
+            width: 100% !important;
+            height: auto !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="videoPlayer" class="video-js vjs-default-skin" controls preload="auto">
+            <source src="https://dai.google.com/ssai/event/g1cPcUIdSQC_3FXsrgV5iA/master.m3u8" type="application/x-mpegURL">
+            Your browser does not support the video tag.
+        </video>
+        <img id="watermark" src="https://i.postimg.cc/MK6tWS8d/20240708-030944.png" class="watermark" alt="FREDFLIX">
+    </div>
+
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+</body>
+              </html>
