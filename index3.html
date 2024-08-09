@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ALL IN ONE TATAPLAY</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .telegram-link {
+            background-color: #0088cc;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .jwplayer {
+            position: absolute !important;
+            top: 50px; /* Adjust to fit below the Telegram link */
+            width: 100%;
+            height: calc(100% - 50px); /* Adjust to fit below the Telegram link */
+        }
+
+        .jwplayer.jw-flag-aspect-mode {
+            min-height: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Telegram link -->
+    <div class="telegram-link">
+        <a href="https://t.me/live_cricket_24" target="_blank" style="color: white; text-decoration: none;">Join us on Telegram</a>
+    </div>
+    
+    <!-- JWPlayer -->
+    <div id="jwplayerDiv"></div>
+
+    <script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
+    <script type="text/javascript">
+        var config = {"file":"https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd","drm":{"clearkey":{"keyId":"ae26845bd33038a9c0774a0981007294","key":"63ac662dde310cfb4cc6f9b43b34196d"}}};
+
+        jwplayer("jwplayerDiv").setup({
+            file: config.file,
+            position: 'bottom',
+            autostart: true,
+            stretching: "",
+            width: "100%",
+            type: "dash",
+            drm: {
+                clearkey: {
+                    keyId: config.drm.clearkey.keyId,
+                    key: config.drm.clearkey.key
+                }
+            }
+        });
+    </script>
+</body>
+</html>
